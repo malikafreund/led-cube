@@ -438,3 +438,8 @@ void randomRainbow(){
     color = nextColor(color);
   }
 }
+
+void snake(){
+
+
+}
