@@ -1,3 +1,6 @@
+#include "cubeplex.h"
+
+
 /********************************* PLANAR SPIN ********************************\
 | A plane of light spins around the virtical center of the cube and changes    |
 | colors after a certian number of rotations                                   |
@@ -336,35 +339,6 @@ void planarFlop3D() {
       clearBuffer();
       delay(animationSpeed);
     }
-    color = nextColor(color);
-  }
-}
-
-/****************************** RANDOM RAINBOW!!! *****************************\
-| 
-\******************************************************************************/
-/******************************* RANDOM RAINBOW *******************************\
-| Our very first program together. Presenting Random rainbow, a cube that is   |
-| both beautiful and exciting and really really really really fun ;)           |
-\******************************************************************************/
-
-void randomRainbow(){
-  continuePattern = true; 
-  int animationSpeed = 80; 
-  int color = red;
-  int xpos, ypos, zpos;
-  while (continuePattern) {
-    for (int i = 0; i < 4; i++) {
-      xpos = random(0,4);
-      ypos = random(0,4);
-      zpos = random(0,4);
-      color = nextColor(color);
-      drawLed(color,xpos,ypos,zpos);
-    }
-     
-    flushBuffer();
-    clearBuffer();
-    delay(animationSpeed);
     color = nextColor(color);
   }
 }
