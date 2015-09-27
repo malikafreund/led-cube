@@ -7,11 +7,11 @@
 
 void randomRainbow(){
   continuePattern = true; 
-  int animationSpeed = 80; 
+  int animationSpeed = 100; 
   int color = red;
   int xpos, ypos, zpos;
   while (continuePattern) {
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 3; i++) {
       xpos = random(0,4);
       ypos = random(0,4);
       zpos = random(0,4);
@@ -31,22 +31,25 @@ void randomRainbow(){
 | monsoons of India, and the falls of Niagra. Not California.
 \******************************************************************************/
 
-void rainDrops(){
+void raindrops(){
   continuePattern = true;
-  int animationSpeed = 100;
+  int animationSpeed = 80;
   int color = blue;
   int xpos, ypos, zpos;
   while (continuePattern) {
     xpos = random(0,4);
     ypos = random(0,4);
     for (int i = 3; i >= 0; i--) {
-      zpos = i;
-      drawLed(xpos, ypos, zpos);
+     zpos = i;
+      drawLed(color, xpos, ypos, zpos);
       flushBuffer();
       clearBuffer();
       delay(animationSpeed);
-    }
+     }
+    drawLed(color, 0, xpos, ypos, zpos+1);
+    flushBuffer();
+    clearBuffer();
     color = nextColor(color);
-    delay(random(300, 800))
+    delay(random(100, 200));
   }
 }

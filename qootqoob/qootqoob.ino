@@ -16,8 +16,6 @@
 
 int TYPE = 2;
 
-int color = red;
-
 void setup() {
   initCube();
   
@@ -25,7 +23,7 @@ void setup() {
 
 void loop() {
 
-  type = TYPE;
+  int type = TYPE;
   switch (type) {
 
     case 1:
@@ -39,14 +37,14 @@ void loop() {
       tunnel();
       chaseTheDot();
       planarFlop3D();
-      rainDrops();
+      raindrops();
       randomRainbow();
       break;
 
     case 2:
       animationMax = 20;
       
-      rainDrops();
+      raindrops();
       randomRainbow();
       break;
   }

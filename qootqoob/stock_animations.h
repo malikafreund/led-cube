@@ -1,6 +1,6 @@
 #include "cubeplex.h"
 
-
+int color = red;
 /********************************* PLANAR SPIN ********************************\
 | A plane of light spins around the virtical center of the cube and changes    |
 | colors after a certian number of rotations                                   |
